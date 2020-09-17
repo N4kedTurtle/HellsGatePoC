@@ -1,7 +1,0 @@
-﻿  HellsGatePoC.cpp
-C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HellsGatePoC\HellsGatePoC.cpp(162,38): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
-C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HellsGatePoC\HellsGatePoC.cpp(283,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'SIZE_T'
-C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HellsGatePoC\HellsGatePoC.cpp(283,9): message : consider using '%lld' in the format string
-C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HellsGatePoC\HellsGatePoC.cpp(283,9): message : consider using '%Id' in the format string
-C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HellsGatePoC\HellsGatePoC.cpp(283,9): message : consider using '%I64d' in the format string
-  HellsGatePoC.vcxproj -> C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\x64\Debug\HellsGatePoC.exe
