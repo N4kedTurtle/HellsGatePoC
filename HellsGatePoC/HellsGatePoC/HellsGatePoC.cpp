@@ -281,7 +281,6 @@ int main(int argc, char* argv[])
 	status = _NtCreateThreadEx(&hRemoteThread, 0x1FFFFF, NULL, hProc,
 		(LPTHREAD_START_ROUTINE)lpAllocationStart, NULL, FALSE, 0, 0, 0, NULL);
 
-	BOOL truth = VirtualProtectEx(hProc, lpAllocationStart, szAllocation, PAGE_EXECUTE_READWRITE, &oldProtect);
 
 	if (hRemoteThread)
 		CloseHandle(hRemoteThread);
