@@ -191,8 +191,6 @@ BOOL EstablishSyscalls()
 			printf("Found ntdll.dll!");
 			break;
 		}
-		printf("Couldn't Find ntdll!");
-		return FALSE;
 	}
 
 
