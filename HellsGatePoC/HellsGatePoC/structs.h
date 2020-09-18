@@ -6,10 +6,6 @@
 //Most of this comes from https://github.com/am0nsec/HellsGate/blob/master/HellsGate/structs.h
 
 
-/*--------------------------------------------------------------------
-  STRUCTURES
---------------------------------------------------------------------*/
-
 typedef struct _CLIENT_ID
 {
 	PVOID UniqueProcess;

@@ -1,0 +1,61 @@
+﻿  HG_ReadFilePOC.cpp
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(49,2): warning C4091: 'typedef ': ignored on left of 'ProcessEntity' when no variable is declared
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(321,1): warning C4102: 'done': unreferenced label
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(993,1): warning C4267: 'initializing': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(1247,1): warning C4267: 'initializing': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(1269,1): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(1280,1): warning C4267: '=': conversion from 'size_t' to 'BYTE', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(1297,1): warning C4267: '=': conversion from 'size_t' to 'BYTE', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(1401,1): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(2380,1): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(2409,1): warning C4267: 'argument': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(2416,1): warning C4267: 'initializing': conversion from 'size_t' to 'DWORD', possible loss of data
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\HG_ReadFilePOC.cpp(80,38): warning C4312: 'type cast': conversion from 'DWORD' to 'void *' of greater size
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\HG_ReadFilePOC.cpp(233,9): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'SIZE_T'
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\HG_ReadFilePOC.cpp(233,9): message : consider using '%lld' in the format string
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\HG_ReadFilePOC.cpp(233,9): message : consider using '%Id' in the format string
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\HG_ReadFilePOC.cpp(233,9): message : consider using '%I64d' in the format string
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2390,23): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2401): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2401): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(_Iter,const _Iter,std::input_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2381): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(2381): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct<wchar_t*>(const _Iter,const _Iter,std::forward_iterator_tag)' being compiled
+          with
+          [
+              _Iter=wchar_t *
+          ]
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(211): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\admin\Desktop\Github\HellsGatePoC\HellsGatePoC\HG_ReadFilePOC\Utils.h(211): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+  Generating code
+  Finished generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 474 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  HG_ReadFilePOC.vcxproj -> C:\Users\admin\Desktop\GitHub\HellsGatePoC\HellsGatePoC\x64\Release\HG_ReadFilePOC.exe
